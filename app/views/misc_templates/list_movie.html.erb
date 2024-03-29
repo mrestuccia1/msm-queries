@@ -4,5 +4,6 @@
     <a href="/<%= @route %>/<%= item[0] %>">
       Show details
     </a>
+    <p>Director Name: <%= Director.where(id: item[2])[0].name %></p>
   <% end %>
 </ol>

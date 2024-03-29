@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get("/directors/eldest", { :controller => "director", :action => "get_oldest" })
 
+  get("/directors", { :controller => "director", :action => "get_all" })
+
   get("/movies", { :controller => "movie", :action => "get_all" })
 
   get("/actors", { :controller => "actor", :action => "get_all" })

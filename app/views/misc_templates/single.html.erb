@@ -1,0 +1,89 @@
+<html><head>
+    <title>Target: MSM Queries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <nav>
+      <a href="/">
+        Home
+      </a>
+    </nav>
+
+<a href="/directors">
+  Go back
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @name %>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%= @dob %>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%= @bio %>
+  </dd>
+</dl>
+
+<hr>
+
+<h2>Filmography</h2>
+
+<table border="1">
+  <tbody><tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Image
+    </th>
+
+    <th>
+      Title
+    </th>
+
+    <th>
+      Year
+    </th>
+
+    <th>
+      Director
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @movies.each do |movie| %>
+  <tr>
+    <td><%= movie.id %></td>
+    <td><%= movie.title %></td>
+    <td><%= movie.year %></td>
+    <td><%= @name %></td>
+    <td>
+      <a href="/movies/<%= movie.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+<% end %>
+
+</tbody></table>
+
+</body>

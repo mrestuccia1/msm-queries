@@ -1,0 +1,61 @@
+<html><head>
+    <title>Target: MSM Queries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <nav>
+      <a href="/">
+        Home
+      </a>
+    </nav>
+
+<a href="/directors">
+  Go back
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @name %>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%= @dob %>
+  </dd>
+</dl>
+
+<hr>
+
+<h2>Filmography</h2>
+
+<table border="1">
+  <tbody><tr>
+
+    <th>
+      Movie
+    </th>
+
+    <th>
+      Director
+    </th>
+  </tr>
+
+  <% for i in (0..@directors.length) %>
+  <tr>
+    <td><%= @directors[i] %></td>
+    <td><%= @names[i] %></td>
+  </tr>
+<% end %>
+
+</tbody></table>
+
+</body>
